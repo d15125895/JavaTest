@@ -1,5 +1,10 @@
 package ie.dit;
 
+
+import java.io.BufferedReader;
+import java.util.ArrayList;
+
+
 public class Tune // must be same as file name
 {
 	
@@ -10,28 +15,54 @@ public class Tune // must be same as file name
 	private char Notation;
 	
 	
-	public int getX()
-	{
-		return X;
-	}
+		public int getX()
+		{
+			return X;
+		}
+		
+		public char getTitle()
+		{
+			return Title;
+		}
+		
+		public char getAltTitle()
+		{
+			return AltTitle;
+		}
+		
+		public char getNotation()
+		{
+			return Notation;
+		}
 	
-	public char getTitle()
-	{
-		return Title;
-	}
-	
-	public char getAltTitle()
-	{
-		return AltTitle;
-	}
-	
-	public char getNotation()
-	{
-		return Notation;
-	}
 	
 	
-	
+		
+			public String toString()
+			{
+				
+				StrBuffer sb = new StrBuffer();
+				
+				for(String word:words)
+				{
+					sb.append(word + ", ");
+				}
+
+				return sb.toString();
+
+		
+					public class TuneBook 
+					
+					{
+						ArrayList<String> words = new ArrayList<String>();
+
+							public tunes()
+							{
+								loadTunes ();
+							}
+												
+						
+					}
 	
 	
 	
