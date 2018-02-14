@@ -18,10 +18,21 @@ public class Tune // must be same as file name
 	
 	
 	private int X;
-	private char Title;
-	private char AltTitle ;
-	private char Notation;
+	private String Title;
+	private String AltTitle ;
+	private String Notation;
 	
+	
+	public Tune(int X, String Title, String AltTitle, String Notation ) {
+      
+      
+	  this.X = X;
+	  this.Title = Title;
+      this.AltTitle = AltTitle;
+	  this.Notation = Notation;
+      
+	  
+	}
 	
 		public int getX()
 		{
