@@ -34,13 +34,8 @@ public class Tune // must be same as file name
 		{
 			return Notation;
 		}
-	
-	
-	
-	public static void main (String[] args) // main methode
-	{
 		
-	
+		
 	
 		
 			public String toString()
@@ -71,36 +66,47 @@ public class Tune // must be same as file name
 					
 					
 							
-				public void loadTunes()
-				{
-
-								   
-				   BufferedReader inputStream = null;
-
-				     try {
-					   inputStream = new BufferedReader(new FileReader("abc.txt"));
-										
-						String l;
-						   while ((l = inputStream.readLine()) != null) {
-								abc.add(l);
-								}
-									
-									
-						  catch (IOException e)
+						public void loadTunes()
 						{
-								e.printStackTrace();
-						} 
-						  finally 
-						{
-						  if (inputStream != null) {
+
+										   
+						   BufferedReader inputStream = null;
+
+							 try {
+							   inputStream = new BufferedReader(new FileReader("abc.txt"));
+												
+								String l;
+								   while ((l = inputStream.readLine()) != null) {
+										abc.add(l);
+										}
 											
-							 try
-							       {
-										inputStream.close();
-							     	}
 											
+								  catch (IOException e)
+								{
+										e.printStackTrace();
+								} 
+								  finally 
+								{
+								  if (inputStream != null) {
+													
+									 try
+										   {
+												inputStream.close();
+											}
+													
+									}
 							}
 					}
 			}
-	}
+			
+					public static void main (String[] args) 
+			{
+				
+								TuneBook tb = new TuneBook("jig.abc");
+										System.out.println(tb);
+
+										Tune t = tb.findTune("Up in the Air");
+											t.play();
+				
+			}
 }	
