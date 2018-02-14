@@ -37,6 +37,11 @@ public class Tune // must be same as file name
 	
 	
 	
+	public static void main (String[] args) // main methode
+	{
+		
+	
+	
 		
 			public String toString()
 			{
@@ -63,11 +68,39 @@ public class Tune // must be same as file name
 												
 						
 					}
-	
-	
-	
-	public static void main (String[] args) // main methode
-	{
-		
+					
+					
+							
+				public void loadTunes()
+				{
+
+								   
+				   BufferedReader inputStream = null;
+
+				     try {
+					   inputStream = new BufferedReader(new FileReader("abc.txt"));
+										
+						String l;
+						   while ((l = inputStream.readLine()) != null) {
+								abc.add(l);
+								}
+									
+									
+						  catch (IOException e)
+						{
+								e.printStackTrace();
+						} 
+						  finally 
+						{
+						  if (inputStream != null) {
+											
+							 try
+							       {
+										inputStream.close();
+							     	}
+											
+							}
+					}
+			}
 	}
 }	
