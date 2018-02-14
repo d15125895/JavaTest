@@ -1,6 +1,6 @@
 package ie.dit;
 
-
+import java.io.IOException;
 import java.io.BufferedReader;
 import java.util.ArrayList;
 
@@ -54,7 +54,7 @@ public class Tune // must be same as file name
 					public class TuneBook 
 					
 					{
-						ArrayList<String> words = new ArrayList<String>();
+						ArrayList<String> Title = new ArrayList<String>();
 
 							public tunes()
 							{
@@ -63,6 +63,31 @@ public class Tune // must be same as file name
 												
 						
 					}
+					
+					
+					public Tune findTune(String Title)
+					{
+						
+						int matchTune = Integer.MAX_VALUE;
+								String matchTitle = ""; 
+									for(String w:Title)
+									{
+										int ed = EditDistance.MinimumEditDistance(Title, w);
+										if (ed == 0)
+										{
+											return Title;
+										}
+										if (ed < matchTune)
+										{
+											matchTune = ed;
+											matchTitle = w;
+										}
+									}
+									return matchTitle]];
+								}
+
+					}
+					
 					
 					
 							
@@ -99,7 +124,7 @@ public class Tune // must be same as file name
 					}
 			}
 			
-					public static void main (String[] args) 
+					public static void main (String[] args) // main methode
 			{
 				
 								TuneBook tb = new TuneBook("jig.abc");
