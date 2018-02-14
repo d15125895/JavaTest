@@ -4,10 +4,33 @@ public class Tune // must be same as file name
 {
 	
 	
-	private int x;
-	private char title;
-	private char altTitle ;
-	private char notation;
+	private int X;
+	private char Title;
+	private char AltTitle ;
+	private char Notation;
+	
+	
+	public int getX()
+	{
+		return X;
+	}
+	
+	public char getTitle()
+	{
+		return Title;
+	}
+	
+	public char getAltTitle()
+	{
+		return AltTitle;
+	}
+	
+	public char getNotation()
+	{
+		return Notation;
+	}
+	
+	
 	
 	
 	
